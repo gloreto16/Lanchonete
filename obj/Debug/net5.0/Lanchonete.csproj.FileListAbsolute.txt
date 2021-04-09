@@ -1,0 +1,16 @@
+C:\Users\Gabriel L.S\Desktop\Lanchonete\bin\Debug\net5.0\Lanchonete.exe
+C:\Users\Gabriel L.S\Desktop\Lanchonete\bin\Debug\net5.0\Lanchonete.deps.json
+C:\Users\Gabriel L.S\Desktop\Lanchonete\bin\Debug\net5.0\Lanchonete.runtimeconfig.json
+C:\Users\Gabriel L.S\Desktop\Lanchonete\bin\Debug\net5.0\Lanchonete.runtimeconfig.dev.json
+C:\Users\Gabriel L.S\Desktop\Lanchonete\bin\Debug\net5.0\Lanchonete.dll
+C:\Users\Gabriel L.S\Desktop\Lanchonete\bin\Debug\net5.0\ref\Lanchonete.dll
+C:\Users\Gabriel L.S\Desktop\Lanchonete\bin\Debug\net5.0\Lanchonete.pdb
+C:\Users\Gabriel L.S\Desktop\Lanchonete\obj\Debug\net5.0\Lanchonete.csprojAssemblyReference.cache
+C:\Users\Gabriel L.S\Desktop\Lanchonete\obj\Debug\net5.0\Lanchonete.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel L.S\Desktop\Lanchonete\obj\Debug\net5.0\Lanchonete.AssemblyInfoInputs.cache
+C:\Users\Gabriel L.S\Desktop\Lanchonete\obj\Debug\net5.0\Lanchonete.AssemblyInfo.cs
+C:\Users\Gabriel L.S\Desktop\Lanchonete\obj\Debug\net5.0\Lanchonete.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel L.S\Desktop\Lanchonete\obj\Debug\net5.0\Lanchonete.dll
+C:\Users\Gabriel L.S\Desktop\Lanchonete\obj\Debug\net5.0\ref\Lanchonete.dll
+C:\Users\Gabriel L.S\Desktop\Lanchonete\obj\Debug\net5.0\Lanchonete.pdb
+C:\Users\Gabriel L.S\Desktop\Lanchonete\obj\Debug\net5.0\Lanchonete.genruntimeconfig.cache
