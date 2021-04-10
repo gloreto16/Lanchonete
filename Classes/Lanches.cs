@@ -2,13 +2,14 @@ namespace Lanchonete
 {
     public class Lanches : Comida
     {
-        private string Pao {get; set;}
-        private string MolhoLanche {get; set;}
+        private int Pao {get; set;}
+        private int MolhoLanche {get; set;}
+        private RecheioLanche RecheioLanche {get; set;}
 
-        public Lanches(string pao, string recheio, string molho, int quantidade)
+        public Lanches(int pao, RecheioLanche recheio, int molho, int quantidade)
         {
             this.Pao = pao;
-            this.Recheio = recheio;
+            this.RecheioLanche = recheio;
             this.MolhoLanche = molho;
             this.Quantidade = quantidade;
             this.PrecoVenda = 12.00;

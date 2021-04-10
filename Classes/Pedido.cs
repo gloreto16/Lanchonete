@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace Lanchonete
 {
     public class Pedido
@@ -5,13 +8,6 @@ namespace Lanchonete
         public string nomeCliente {get; set;}
         public string gorjeta {get; set;}
 
-        public void calcularPrecoTotal()
-        {
-            
-        }
-        public void mostrarFatura()
-        {
-
-        }
+        
     }
 }
