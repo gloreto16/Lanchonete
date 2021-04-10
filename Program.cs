@@ -24,6 +24,12 @@ namespace Lanchonete
                     case "3":
                         //TODO fazerPagamento();
                         break;
+                    case "4":
+                        //TODO listarComidas();
+                        break;
+                    case "5":
+                        Console.Clear();
+                        break;
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
@@ -42,6 +48,7 @@ namespace Lanchonete
             Console.WriteLine("2 - Fazer um pedido");
             Console.WriteLine("3 - Efetuar pagamento");
             Console.WriteLine("4 - Mostrar pedido");
+            Console.WriteLine("5 - Limpar a tela");
             Console.WriteLine("X - Sair");
             Console.WriteLine("---------------//--------------");
             Console.WriteLine();
@@ -73,9 +80,6 @@ namespace Lanchonete
                 case "3":
                     pedidoSalgado();
                     break;
-                /*case "4":
-                    listarComidas();
-                    break;*/
                 default:
                     throw new ArgumentOutOfRangeException();
             }
