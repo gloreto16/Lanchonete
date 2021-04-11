@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-//Arrumar opções e retornos
+//Arrumar calculo de preço total e tela fiscal
 namespace Lanchonete
 {
     class Program
@@ -89,6 +89,14 @@ namespace Lanchonete
         {
             Console.WriteLine("Você vai querer borda recheada? S/N");
             string escolhaBorda = Console.ReadLine();
+            if(escolhaBorda == "S")
+            {
+                escolhaBorda = "Borda Recheada";
+            }
+            else if(escolhaBorda == "N")
+            {
+                escolhaBorda = "Sem borda recheada";
+            }
             Console.WriteLine("Digite o sabor que deseja: ");
             foreach (int i in Enum.GetValues(typeof(RecheioPizza)))
             {
@@ -96,7 +104,23 @@ namespace Lanchonete
             }
             int escolhaRecheio = int.Parse(Console.ReadLine());
             Console.WriteLine("Escolha o acompanhamento: 1 - Ketchup\n2 - Mostarda\n3 - Maionese\n4 - Todos");
-            int escolhaMolho = int.Parse(Console.ReadLine());
+            string escolhaMolho = Console.ReadLine();
+            if(escolhaMolho == "1")
+            {
+                escolhaMolho = "Ketchup";
+            }
+            else if(escolhaMolho == "2")
+            {
+                escolhaMolho = "Mostarda";
+            }
+            else if(escolhaMolho == "3")
+            {
+                escolhaMolho = "Maionese";
+            }
+            else if(escolhaMolho == "4")
+            {
+                escolhaMolho = "Todos molhos";
+            }
             Console.WriteLine("Digite quantas pizzas deste tipo você vai querer: ");
             int quantidadePizza = int.Parse(Console.ReadLine());
 
@@ -113,7 +137,23 @@ namespace Lanchonete
         private static void pedidoLanche()
         {
             Console.WriteLine("Você vai querer qual tipo de pão: 1 - 9 grãos\n2 - Italiano\n3 - 3 Queijos\n4 - Parmesão com Orégano");
-            int escolhaPao = int.Parse(Console.ReadLine());
+            string escolhaPao = Console.ReadLine();
+            if(escolhaPao == "1")
+            {
+                escolhaPao = "9 Grãos";
+            }
+            else if(escolhaPao == "2")
+            {
+                escolhaPao = "Italiano";
+            }
+            else if(escolhaPao == "3")
+            {
+                escolhaPao = "3 Queijos";
+            }
+            else if(escolhaPao == "4")
+            {
+                escolhaPao = "Parmesão com Orégano";
+            }
             Console.WriteLine("Digite o sabor que deseja: ");
             foreach (int i in Enum.GetValues(typeof(RecheioLanche)))
             {
@@ -121,7 +161,23 @@ namespace Lanchonete
             }
             int escolhaRecheio = int.Parse(Console.ReadLine());
             Console.WriteLine("Escolha o acompanhamento: 1 - Ketchup\n2 - Mostarda\n3 - Maionese\n4 - Todos");
-            int escolhaMolho = int.Parse(Console.ReadLine());
+            string escolhaMolho = Console.ReadLine();
+            if(escolhaMolho == "1")
+            {
+                escolhaMolho = "Ketchup";
+            }
+            else if(escolhaMolho == "2")
+            {
+                escolhaMolho = "Mostarda";
+            }
+            else if(escolhaMolho == "3")
+            {
+                escolhaMolho = "Maionese";
+            }
+            else if(escolhaMolho == "4")
+            {
+                escolhaMolho = "Todos molhos";
+            }
             Console.WriteLine("Digite quantos lanches deste tipo você vai querer: ");
             int quantidadeLanche = int.Parse(Console.ReadLine());
 
@@ -145,6 +201,14 @@ namespace Lanchonete
             int escolhaRecheio = int.Parse(Console.ReadLine());
             Console.WriteLine("O senhor(a) irá querer o salgado frito? S/N");
             string escolhaTipo = Console.ReadLine();
+            if(escolhaTipo == "S")
+            {
+                escolhaTipo = "Frito";
+            }
+            else if(escolhaTipo == "N")
+            {
+                escolhaTipo = "Assado";
+            }
             Console.WriteLine("Digite quantos salgados deste tipo você vai querer: ");
             int quantidadeSalgado = int.Parse(Console.ReadLine());
 

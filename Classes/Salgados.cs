@@ -15,8 +15,11 @@ namespace Lanchonete
         public override string ToString()
         {
             string retorno = "";
+            retorno += "Salgado -> ";
             retorno += "Tipo: " + this.Tipo + " || ";
-            retorno += "Recheio: " + this.RecheioSalgado;
+            retorno += "Recheio: " + this.RecheioSalgado + " || ";
+            retorno += "Preço Unitário: " + this.PrecoVenda + " || ";
+            retorno += "Quantidade: " + this.Quantidade;
             return retorno;
         }
     }

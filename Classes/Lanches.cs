@@ -2,11 +2,11 @@ namespace Lanchonete
 {
     public class Lanches : Comida
     {
-        private int Pao {get; set;}
-        private int MolhoLanche {get; set;}
+        private string Pao {get; set;}
+        private string MolhoLanche {get; set;}
         private RecheioLanche RecheioLanche {get; set;}
 
-        public Lanches(int pao, RecheioLanche recheio, int molho, int quantidade)
+        public Lanches(string pao, RecheioLanche recheio, string molho, int quantidade)
         {
             this.Pao = pao;
             this.RecheioLanche = recheio;
@@ -17,9 +17,12 @@ namespace Lanchonete
         public override string ToString()
         {
             string retorno = "";
+            retorno += "Lanche -> ";
             retorno += "Pao: " + this.Pao + " || ";
             retorno += "Recheio: " + this.RecheioLanche + " || ";
-            retorno += "Molho: " + this.MolhoLanche;
+            retorno += "Molho: " + this.MolhoLanche + " || ";
+            retorno += "Preço Unitário: " + this.PrecoVenda + " || ";
+            retorno += "Quantidade: " + this.Quantidade;
             return retorno;
         }
         
