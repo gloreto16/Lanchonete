@@ -14,5 +14,14 @@ namespace Lanchonete
             this.Quantidade = quantidade;
             this.PrecoVenda = 12.00;
         }
+        public override string ToString()
+        {
+            string retorno = "";
+            retorno += "Pao: " + this.Pao + " || ";
+            retorno += "Recheio: " + this.RecheioLanche + " || ";
+            retorno += "Molho: " + this.MolhoLanche;
+            return retorno;
+        }
+        
     }
 }

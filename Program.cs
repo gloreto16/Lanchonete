@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-//Arrumar lista de objetos
+//Arrumar opções e retornos
 namespace Lanchonete
 {
     class Program
     {
-        //static List<Comida> listaComidas = new List<Comida>();
+        static List<Comida> lista = new List<Comida>();
         static void Main(string[] args)
         {
             string opcaoUsuario = menuPrincipal();
@@ -25,7 +25,7 @@ namespace Lanchonete
                         //TODO fazerPagamento();
                         break;
                     case "4":
-                        //TODO listarComidas();
+                        listarComidas();
                         break;
                     case "5":
                         Console.Clear();
@@ -101,7 +101,7 @@ namespace Lanchonete
             int quantidadePizza = int.Parse(Console.ReadLine());
 
             Pizza pizza = new Pizza(borda: escolhaBorda, recheio: (RecheioPizza)escolhaRecheio, molho: escolhaMolho, quantidade: quantidadePizza);
-            //listaComidas.Add(pizza);
+            lista.Add(pizza);
 
             Console.WriteLine("Deseja continuar pedindo? S/N");
             string opcaoPedido = Console.ReadLine().ToUpper();
@@ -126,7 +126,7 @@ namespace Lanchonete
             int quantidadeLanche = int.Parse(Console.ReadLine());
 
             Lanches lanche = new Lanches(pao: escolhaPao, recheio: (RecheioLanche)escolhaRecheio, molho: escolhaMolho, quantidade: quantidadeLanche);
-            //listaComidas.Add(lanche);
+            lista.Add(lanche);
 
             Console.WriteLine("Deseja continuar pedindo? S/N");
             string opcaoPedido = Console.ReadLine().ToUpper();
@@ -149,7 +149,7 @@ namespace Lanchonete
             int quantidadeSalgado = int.Parse(Console.ReadLine());
 
             Salgados salgado = new Salgados(recheio: (RecheioSalgados)escolhaRecheio, tipo: escolhaTipo, quantidade: quantidadeSalgado);
-            //listaComidas.Add(salgado);
+            lista.Add(salgado);
 
             Console.WriteLine("Deseja continuar pedindo? S/N");
             string opcaoPedido = Console.ReadLine().ToUpper();
@@ -158,21 +158,14 @@ namespace Lanchonete
                 fazerPedido();
             }
         }
-        /*private static void listarComidas()
+        private static void listarComidas()
         {
-            if(listaComidas.Count == 0)
+            for(int i = 0; i < lista.Count; i++)
             {
-                Console.WriteLine("Nenhuma comida cadastrada.");
-                return;
-            }
-
-            for(int i = 0; i < listaComidas.Count; i++)
-            {
-                Comida comida = listaComidas[i];
+                Comida conta = lista[i];
                 Console.Write("#{0} - ", i);
-                Console.WriteLine(comida);
+                Console.WriteLine(conta);
             }
         }
-        */
     }
 }

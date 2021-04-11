@@ -5,6 +5,5 @@ namespace Lanchonete
         protected double PrecoVenda {get; set;}
         protected int Quantidade {get; set;}
         
-        
     }
 }
