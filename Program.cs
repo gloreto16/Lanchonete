@@ -22,7 +22,7 @@ namespace Lanchonete
                         fazerPedido();
                         break;
                     case "3":
-                        //TODO fazerPagamento();
+                        fazerPagamento();
                         break;
                     case "4":
                         listarComidas();
@@ -230,6 +230,16 @@ namespace Lanchonete
                 Console.Write("#{0} - ", i);
                 Console.WriteLine(conta);
             }
+        }
+        private static void fazerPagamento()
+        {
+            double conta = 0;
+            foreach(Comida c in lista)
+            {
+                c.calculo();
+                conta = conta + c.PrecoTotal;
+            }
+            Console.WriteLine("Preço total a pagar: "+conta);
         }
     }
 }

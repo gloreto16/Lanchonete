@@ -25,6 +25,9 @@ namespace Lanchonete
             retorno += "Quantidade: " + this.Quantidade;
             return retorno;
         }
+        public override void calculo(){
+            this.PrecoTotal = this.PrecoVenda * this.Quantidade;
+        }
         
     }
 }
