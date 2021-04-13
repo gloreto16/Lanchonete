@@ -21,7 +21,7 @@ namespace Lanchonete
             retorno += "Borda: " + this.Borda + " || ";
             retorno += "Recheio: " + this.RecheioPizza + " || ";
             retorno += "Molho: " + this.MolhoPizza + " || ";
-            retorno += "Preço Unitário: " + this.PrecoVenda + " || ";
+            retorno += "Preço Unitário: R$" + this.PrecoVenda + " || ";
             retorno += "Quantidade: " + this.Quantidade;
             return retorno;
         }

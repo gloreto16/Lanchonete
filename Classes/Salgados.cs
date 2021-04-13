@@ -18,7 +18,7 @@ namespace Lanchonete
             retorno += "Salgado -> ";
             retorno += "Tipo: " + this.Tipo + " || ";
             retorno += "Recheio: " + this.RecheioSalgado + " || ";
-            retorno += "Preço Unitário: " + this.PrecoVenda + " || ";
+            retorno += "Preço Unitário: R$" + this.PrecoVenda + " || ";
             retorno += "Quantidade: " + this.Quantidade;
             return retorno;
         }

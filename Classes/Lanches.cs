@@ -21,7 +21,7 @@ namespace Lanchonete
             retorno += "Pao: " + this.Pao + " || ";
             retorno += "Recheio: " + this.RecheioLanche + " || ";
             retorno += "Molho: " + this.MolhoLanche + " || ";
-            retorno += "Preço Unitário: " + this.PrecoVenda + " || ";
+            retorno += "Preço Unitário: R$" + this.PrecoVenda + " || ";
             retorno += "Quantidade: " + this.Quantidade;
             return retorno;
         }

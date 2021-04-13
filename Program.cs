@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-//Arrumar calculo de preço total e tela fiscal
 namespace Lanchonete
 {
     class Program
@@ -67,7 +66,7 @@ namespace Lanchonete
         }
         private static void fazerPedido()
         {
-            Console.WriteLine("Escolha o que você vai pedir: 1 - Pizza: R$30\n 2- Lanche: R$12\n3 - Salgadinhos: R$3,50");
+            Console.WriteLine("Escolha o que você vai pedir: \n1 - Pizza: R$30\n2 - Lanche: R$12\n3 - Salgadinhos: R$3,50");
             string escolha = Console.ReadLine();
             switch(escolha)
             {
@@ -87,7 +86,7 @@ namespace Lanchonete
         }
         private static void pedidoPizza()
         {
-            Console.WriteLine("Você vai querer borda recheada? S/N");
+            Console.Write("Você vai querer borda recheada? S/N -> ");
             string escolhaBorda = Console.ReadLine();
             if(escolhaBorda == "S")
             {
@@ -103,7 +102,7 @@ namespace Lanchonete
                 Console.WriteLine("{0} - {1}", i, Enum.GetName(typeof(RecheioPizza), i));
             }
             int escolhaRecheio = int.Parse(Console.ReadLine());
-            Console.WriteLine("Escolha o acompanhamento: 1 - Ketchup\n2 - Mostarda\n3 - Maionese\n4 - Todos");
+            Console.Write("Escolha o acompanhamento: \n1 - Ketchup\n2 - Mostarda\n3 - Maionese\n4 - Todos -> ");
             string escolhaMolho = Console.ReadLine();
             if(escolhaMolho == "1")
             {
@@ -121,13 +120,13 @@ namespace Lanchonete
             {
                 escolhaMolho = "Todos molhos";
             }
-            Console.WriteLine("Digite quantas pizzas deste tipo você vai querer: ");
+            Console.Write("Digite quantas pizzas deste tipo você vai querer: ");
             int quantidadePizza = int.Parse(Console.ReadLine());
 
             Pizza pizza = new Pizza(borda: escolhaBorda, recheio: (RecheioPizza)escolhaRecheio, molho: escolhaMolho, quantidade: quantidadePizza);
             lista.Add(pizza);
 
-            Console.WriteLine("Deseja continuar pedindo? S/N");
+            Console.WriteLine("Deseja continuar pedindo? S/N -> ");
             string opcaoPedido = Console.ReadLine().ToUpper();
             if(opcaoPedido == "S")
             {
@@ -136,7 +135,7 @@ namespace Lanchonete
         }
         private static void pedidoLanche()
         {
-            Console.WriteLine("Você vai querer qual tipo de pão: 1 - 9 grãos\n2 - Italiano\n3 - 3 Queijos\n4 - Parmesão com Orégano");
+            Console.Write("Você vai querer qual tipo de pão: \n1 - 9 grãos\n2 - Italiano\n3 - 3 Queijos\n4 - Parmesão com Orégano -> ");
             string escolhaPao = Console.ReadLine();
             if(escolhaPao == "1")
             {
@@ -160,7 +159,7 @@ namespace Lanchonete
                 Console.WriteLine("{0} - {1}", i, Enum.GetName(typeof(RecheioLanche), i));
             }
             int escolhaRecheio = int.Parse(Console.ReadLine());
-            Console.WriteLine("Escolha o acompanhamento: 1 - Ketchup\n2 - Mostarda\n3 - Maionese\n4 - Todos");
+            Console.Write("Escolha o acompanhamento: \n1 - Ketchup\n2 - Mostarda\n3 - Maionese\n4 - Todos -> ");
             string escolhaMolho = Console.ReadLine();
             if(escolhaMolho == "1")
             {
@@ -178,13 +177,13 @@ namespace Lanchonete
             {
                 escolhaMolho = "Todos molhos";
             }
-            Console.WriteLine("Digite quantos lanches deste tipo você vai querer: ");
+            Console.Write("Digite quantos lanches deste tipo você vai querer: ");
             int quantidadeLanche = int.Parse(Console.ReadLine());
 
             Lanches lanche = new Lanches(pao: escolhaPao, recheio: (RecheioLanche)escolhaRecheio, molho: escolhaMolho, quantidade: quantidadeLanche);
             lista.Add(lanche);
 
-            Console.WriteLine("Deseja continuar pedindo? S/N");
+            Console.Write("Deseja continuar pedindo? S/N -> ");
             string opcaoPedido = Console.ReadLine().ToUpper();
             if(opcaoPedido == "S")
             {
@@ -199,7 +198,7 @@ namespace Lanchonete
                 Console.WriteLine("{0} - {1}", i, Enum.GetName(typeof(RecheioSalgados), i));
             }
             int escolhaRecheio = int.Parse(Console.ReadLine());
-            Console.WriteLine("O senhor(a) irá querer o salgado frito? S/N");
+            Console.Write("O senhor(a) irá querer o salgado frito? S/N -> ");
             string escolhaTipo = Console.ReadLine();
             if(escolhaTipo == "S")
             {
@@ -209,13 +208,13 @@ namespace Lanchonete
             {
                 escolhaTipo = "Assado";
             }
-            Console.WriteLine("Digite quantos salgados deste tipo você vai querer: ");
+            Console.Write("Digite quantos salgados deste tipo você vai querer: ");
             int quantidadeSalgado = int.Parse(Console.ReadLine());
 
             Salgados salgado = new Salgados(recheio: (RecheioSalgados)escolhaRecheio, tipo: escolhaTipo, quantidade: quantidadeSalgado);
             lista.Add(salgado);
 
-            Console.WriteLine("Deseja continuar pedindo? S/N");
+            Console.Write("Deseja continuar pedindo? S/N -> ");
             string opcaoPedido = Console.ReadLine().ToUpper();
             if(opcaoPedido == "S")
             {
@@ -233,13 +232,21 @@ namespace Lanchonete
         }
         private static void fazerPagamento()
         {
-            double conta = 0;
+            double precoT = 0;
+            for(int i = 0; i < lista.Count; i++)
+            {
+                Comida conta = lista[i];
+                Console.Write("#{0} - ", i);
+                Console.WriteLine(conta);
+            }
             foreach(Comida c in lista)
             {
                 c.calculo();
-                conta = conta + c.PrecoTotal;
+                precoT = precoT + c.PrecoTotal;
             }
-            Console.WriteLine("Preço total a pagar: "+conta);
+            Console.WriteLine("Preço total do pedido: R$"+precoT);
+            double valorConta = precoT + (precoT * 0.15);
+            Console.WriteLine("Valor Total: R$"+valorConta);
         }
     }
 }
